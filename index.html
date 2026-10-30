@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abdallah | Developer Portfolio</title>
+  <meta name="description" content="Abdallah, a developer and entrepreneur from Somaliland who builds real software for real problems." />
+  <meta name="theme-color" content="#05070f" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Intro animation shown on page load -->
+  <div id="intro" class="intro" aria-hidden="true">
+    <div class="intro-mark"><span id="intro-letter">A</span></div>
+  </div>
+
+  <!-- Background: moving gradient blobs, grid, particles and cursor trail -->
+  <div class="bg" aria-hidden="true">
+    <div class="blob blob-cyan"></div>
+    <div class="blob blob-purple"></div>
+    <div class="blob blob-blue"></div>
+    <div class="grid"></div>
+  </div>
+  <canvas id="particles" class="fx-canvas" aria-hidden="true"></canvas>
+  <canvas id="cursor-trail" class="fx-canvas trail" aria-hidden="true"></canvas>
+
+  <!-- Sticky glass navbar -->
+  <header id="nav" class="nav">
+    <div class="nav-inner">
+      <a href="#home" class="logo" id="logo">A<span>.</span></a>
+      <nav id="nav-links" class="nav-links" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO (text comes from SITE.profile in js/main.js) -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="kicker" id="hero-location"></p>
+        <h1>Hi, I'm <span class="name-gradient" id="hero-name"></span></h1>
+        <p class="typing-line"><span id="typing"></span><span class="caret" aria-hidden="true"></span></p>
+        <p class="hero-intro" id="hero-intro"></p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary magnetic">View Projects</a>
+          <a href="#contact" class="btn btn-ghost magnetic">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-ring">
+          <img id="hero-photo" alt="Photo of Abdallah" width="320" height="320" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT -->
+    <section id="about" class="section">
+      <h2 class="section-title reveal">About <span>Me</span></h2>
+      <div class="glass about-card reveal">
+        <p id="about-text"></p>
+        <div id="skills" class="skills"></div>
+      </div>
+    </section>
+
+    <!-- 3. PROJECTS (cards built from SITE.projects) -->
+    <section id="projects" class="section">
+      <h2 class="section-title reveal">My <span>Projects</span></h2>
+      <p class="section-sub reveal">Click a project to see screenshots, modules and features.</p>
+      <div id="project-grid" class="project-grid"></div>
+    </section>
+
+    <!-- 4. ROADMAP -->
+    <section id="roadmap" class="section">
+      <h2 class="section-title reveal">My <span>Roadmap</span></h2>
+      <ol id="timeline" class="timeline"></ol>
+    </section>
+
+    <!-- 5. CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="section-title reveal">Get in <span>Touch</span></h2>
+      <div class="contact-wrap">
+        <form id="contact-form" class="glass contact-form reveal" novalidate>
+          <label>Your name<input name="name" required autocomplete="name" /></label>
+          <label>Your email<input name="email" type="email" autocomplete="email" /></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <div class="form-buttons">
+            <button type="submit" value="whatsapp" class="btn btn-primary magnetic">Send on WhatsApp</button>
+            <button type="submit" value="email" class="btn btn-ghost magnetic">Send by Email</button>
+          </div>
+          <p id="form-note" class="form-note" role="status"></p>
+        </form>
+        <div id="contact-links" class="contact-links reveal"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. FOOTER -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> <span id="footer-name"></span>. Built with passion in Somaliland.</p>
+  </footer>
+
+  <!-- Project detail view (glass modal) -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel glass" id="modal-panel"></div>
+  </div>
+
+  <!-- Click-to-zoom image viewer -->
+  <div id="lightbox" class="lightbox" hidden>
+    <img id="lightbox-img" alt="" />
+    <button class="lightbox-close" aria-label="Close image">&times;</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
