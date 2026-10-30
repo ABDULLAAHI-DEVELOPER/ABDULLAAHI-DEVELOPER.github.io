@@ -550,10 +550,9 @@ startModal();
 startContact();
 startParticles();
 startCursorTrail();
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    $('#intro').classList.add('done');
-    document.body.classList.add('loaded');
-    startTyping();
-  }, reduceMotion ? 0 : 1100);
-});
+// The intro plays for about a second, without waiting for every image or font to download
+setTimeout(() => {
+  $('#intro').classList.add('done');
+  document.body.classList.add('loaded');
+  startTyping();
+}, reduceMotion ? 0 : 1100);
