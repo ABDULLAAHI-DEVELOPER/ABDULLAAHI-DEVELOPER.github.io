@@ -17,7 +17,7 @@ const SITE = {
   profile: {
     name: 'Abdallah',
     location: 'Based in Somaliland',
-    photo: 'assets/profile.svg', // <-- CHANGE: your photo, e.g. 'assets/me.jpg'
+    photo: 'assets/profile.jpg', // <-- CHANGE: your photo
     typing: ['WordPress Developer', 'Vibe Coder', 'AWS Cloud Computing (Coming Soon)'],
     intro: 'A developer and entrepreneur who builds real software for real problems.',
     about:
@@ -35,8 +35,8 @@ const SITE = {
   },
 
   contact: {
-    whatsapp: '252000000000', // <-- CHANGE: your WhatsApp number with country code, digits only
-    email: 'your.email@example.com', // <-- CHANGE: your email
+    whatsapp: '', // <-- ADD: your WhatsApp number with country code, digits only, e.g. '252634123456'
+    email: '', // <-- ADD: your email, e.g. 'abdallah@example.com'
     github: 'https://github.com/ABDULLAAHI-DEVELOPER',
   },
 
@@ -60,51 +60,60 @@ const SITE = {
       github: '', // <-- add a GitHub link if you make the repo public
       demo: '',
       screenshots: [
-        'assets/projects/unisco/shot-1.svg',
-        'assets/projects/unisco/shot-2.svg',
-        'assets/projects/unisco/shot-3.svg',
-        'assets/projects/unisco/shot-4.svg',
+        'assets/projects/unisco/shot-1.webp', // admin portal dashboard
+        'assets/projects/unisco/shot-2.webp', // mobile app: log in, jobs, verified profile
+        'assets/projects/unisco/shot-3.webp', // portal: users
+        'assets/projects/unisco/shot-4.webp', // portal: projects
+        'assets/projects/unisco/shot-5.webp', // portal: verification queue
+        'assets/projects/unisco/shot-6.webp', // mobile app: wallet, company profile, disputes (Somali)
+        'assets/projects/unisco/shot-7.webp', // portal: withdrawals
       ],
       modules: [
-        { icon: 'users', name: 'Accounts and Roles', text: 'Sign-up with WhatsApp or email. Separate roles for owners, engineers, workers and admins.', image: 'assets/projects/unisco/module-1.svg' },
-        { icon: 'user', name: 'Worker Profiles', text: 'Workers list their skills, photo and worker type. Each type has a standard UNISCO rate.', image: 'assets/projects/unisco/module-2.svg' },
-        { icon: 'shield', name: 'Identity Verification', text: 'Admins check documents and give trusted workers a verified mark.', image: 'assets/projects/unisco/module-3.svg' },
-        { icon: 'folder', name: 'Projects and Milestones', text: 'Owners post projects and split the work into milestones.', image: 'assets/projects/unisco/module-4.svg' },
-        { icon: 'briefcase', name: 'Staffing and Hiring', text: 'Fill a whole position at once with matching, verified workers.', image: 'assets/projects/unisco/module-5.svg' },
-        { icon: 'wallet', name: 'Mobile Money Payments', text: 'Fund projects and pay workers through ZAAD and eDahab, with clear payout status.', image: 'assets/projects/unisco/module-6.svg' },
-        { icon: 'star', name: 'Ratings and Reviews', text: 'Owners and workers rate each other after the job, building trust over time.', image: 'assets/projects/unisco/module-7.svg' },
-        { icon: 'chat', name: 'Messaging and Notifications', text: 'In-app messages and push notifications keep everyone updated.', image: 'assets/projects/unisco/module-8.svg' },
-        { icon: 'dashboard', name: 'Admin Dashboard', text: 'A web portal to manage users, approvals, payments, reports and the audit log.', image: 'assets/projects/unisco/module-9.svg' },
+        { icon: 'users', name: 'Accounts and Roles', text: 'Sign-up with phone or email. Separate roles for owners, engineers, workers, companies and admins.', image: 'assets/projects/unisco/module-1.webp' },
+        { icon: 'user', name: 'Worker Profiles', text: 'Workers and companies show their photo, business details and verification status.', image: 'assets/projects/unisco/module-2.webp' },
+        { icon: 'shield', name: 'Identity Verification', text: 'Admins check documents in a verification queue and approve trusted workers.', image: 'assets/projects/unisco/module-3.webp' },
+        { icon: 'folder', name: 'Projects and Milestones', text: 'Engineers post projects split into milestones, with clear pay per worker type.', image: 'assets/projects/unisco/module-4.webp' },
+        { icon: 'briefcase', name: 'Staffing and Hiring', text: 'Projects list the skills they need, and verified workers apply to fill the positions.', image: 'assets/projects/unisco/module-5.webp' },
+        { icon: 'wallet', name: 'Mobile Money Payments', text: 'Owners fund milestones and workers withdraw to ZAAD or eDahab, with admin approval.', image: 'assets/projects/unisco/module-6.webp' },
+        { icon: 'shield', name: 'Disputes and Holds', text: 'Problems with a milestone are raised as disputes, and the payment is held until resolved.', image: 'assets/projects/unisco/module-7.webp' },
+        { icon: 'bell', name: 'Notifications and Integrations', text: 'WhatsApp sign-up codes, email, push notifications, file storage and payment providers.', image: 'assets/projects/unisco/module-8.webp' },
+        { icon: 'dashboard', name: 'Admin Dashboard', text: 'One screen showing what needs attention: withdrawals, verifications, disputes and more.', image: 'assets/projects/unisco/module-9.webp' },
+        { icon: 'hammer', name: 'Worker Types and Rates', text: 'Admins set worker types (like Kuuli and Wastaad) and their standard daily rates.', image: 'assets/projects/unisco/module-10.webp' },
       ],
     },
     {
       id: 'school-cms',
       name: 'School CMS Plugin',
-      short: 'A WordPress plugin that runs a whole school: students, teachers, exams, fees and more.',
+      short: 'A WordPress plugin that runs a whole school: students, teachers, classes, results, fees and more.',
       description:
-        'A complete school management system built as a WordPress plugin. Schools manage students, teachers, classes, ' +
-        'attendance, exams, fees and reports from their own WordPress dashboard.',
+        'SchoolCore CMS is a complete school management system built as a WordPress plugin. Administrators, teachers, ' +
+        'parents, students and cashiers each get their own dashboard to manage classes, timetables, attendance, ' +
+        'results, assignments, announcements, reports and school fees.',
       tech: ['WordPress', 'PHP', 'MySQL', 'JavaScript'],
       github: '',
       demo: '',
       screenshots: [
-        'assets/projects/school-cms/shot-1.svg',
-        'assets/projects/school-cms/shot-2.svg',
-        'assets/projects/school-cms/shot-3.svg',
-        'assets/projects/school-cms/shot-4.svg',
+        'assets/projects/school-cms/shot-3.webp', // classes
+        'assets/projects/school-cms/shot-2.webp', // students
+        'assets/projects/school-cms/shot-4.webp', // timetable
+        'assets/projects/school-cms/shot-5.webp', // finance
+        'assets/projects/school-cms/shot-6.webp', // teachers
+        'assets/projects/school-cms/shot-1.webp', // dashboard overview
       ],
-      // <-- CHANGE: edit these module names and texts to match the real plugin
       modules: [
-        { icon: 'users', name: 'Students', text: 'Register students and keep their records, guardians and class history in one place.', image: 'assets/projects/school-cms/module-1.svg' },
-        { icon: 'user', name: 'Teachers', text: 'Manage teacher profiles, subjects and class assignments.', image: 'assets/projects/school-cms/module-2.svg' },
-        { icon: 'layers', name: 'Classes and Subjects', text: 'Set up classes, sections and the subjects taught in each.', image: 'assets/projects/school-cms/module-3.svg' },
-        { icon: 'clipboard', name: 'Attendance', text: 'Take daily attendance and see attendance reports by class or student.', image: 'assets/projects/school-cms/module-4.svg' },
-        { icon: 'book', name: 'Exams and Results', text: 'Create exams, enter marks and publish results and report cards.', image: 'assets/projects/school-cms/module-5.svg' },
-        { icon: 'wallet', name: 'Fees and Payments', text: 'Set fee structures, record payments and track unpaid balances.', image: 'assets/projects/school-cms/module-6.svg' },
-        { icon: 'calendar', name: 'Timetable', text: 'Build weekly timetables for every class and teacher.', image: 'assets/projects/school-cms/module-7.svg' },
-        { icon: 'bell', name: 'Notices and Messages', text: 'Send notices and messages to students, parents and staff.', image: 'assets/projects/school-cms/module-8.svg' },
-        { icon: 'chart', name: 'Reports', text: 'Print-ready reports on students, attendance, results and finances.', image: 'assets/projects/school-cms/module-9.svg' },
-        { icon: 'settings', name: 'Settings and User Roles', text: 'Control school settings and what each role (admin, teacher, parent) can see.', image: 'assets/projects/school-cms/module-10.svg' },
+        { icon: 'users', name: 'Students', text: 'Register students, search them and import many at once from a CSV file.', image: 'assets/projects/school-cms/module-1.webp' },
+        { icon: 'user', name: 'Teachers', text: 'Teacher accounts with subject assignments, password resets and suspension.', image: 'assets/projects/school-cms/module-2.webp' },
+        { icon: 'layers', name: 'Classes', text: 'Every class with its students, subjects and academic year at a glance.', image: 'assets/projects/school-cms/module-3.webp' },
+        { icon: 'book', name: 'Subjects', text: 'Set the subjects taught in each grade and copy them to other grades.', image: 'assets/projects/school-cms/module-4.webp' },
+        { icon: 'calendar', name: 'Timetable', text: 'School sessions and a weekly timetable for every class and teacher.', image: 'assets/projects/school-cms/module-5.webp' },
+        { icon: 'clipboard', name: 'Attendance', text: 'Daily attendance by class and date, with a full attendance history.', image: 'assets/projects/school-cms/module-6.webp' },
+        { icon: 'target', name: 'Results', text: 'Upload class results and view or correct them by class and exam.', image: 'assets/projects/school-cms/module-7.webp' },
+        { icon: 'chart', name: 'Performance', text: 'Compare performance by year, grade and class.', image: 'assets/projects/school-cms/module-8.webp' },
+        { icon: 'folder', name: 'Assignments', text: 'Teachers post assignments and track them per class.', image: 'assets/projects/school-cms/module-9.webp' },
+        { icon: 'bell', name: 'Announcements', text: 'Publish announcements to students, parents and staff.', image: 'assets/projects/school-cms/module-10.webp' },
+        { icon: 'chart', name: 'Reports', text: 'Run reports such as attendance summaries for any date range.', image: 'assets/projects/school-cms/module-11.webp' },
+        { icon: 'wallet', name: 'Finance', text: 'Monthly fees, payments, unpaid balances and a class payment overview for cashiers.', image: 'assets/projects/school-cms/module-12.webp' },
+        { icon: 'settings', name: 'Branding and Settings', text: 'School name, colours and logo, plus system settings.', image: 'assets/projects/school-cms/module-13.webp' },
       ],
     },
     {
@@ -118,20 +127,19 @@ const SITE = {
       github: 'https://github.com/ABDULLAAHI-DEVELOPER/sema-kenya',
       demo: 'https://abdullaahi-developer.github.io/sema-kenya/',
       screenshots: [
-        'assets/projects/sema-kenya/shot-1.svg',
-        'assets/projects/sema-kenya/shot-2.svg',
-        'assets/projects/sema-kenya/shot-3.svg',
-        'assets/projects/sema-kenya/shot-4.svg',
+        'assets/projects/sema-kenya/shot-1.webp', // welcome, learning path, new word
+        'assets/projects/sema-kenya/shot-2.webp', // exercise, conversation, story
+        'assets/projects/sema-kenya/shot-3.webp', // unit guide, Somali interface, settings
       ],
       modules: [
-        { icon: 'map', name: 'Learning Path', text: '32 units in four levels, A1 to B2. Lessons unlock one after another.', image: 'assets/projects/sema-kenya/module-1.svg' },
-        { icon: 'target', name: 'Lessons and Exercises', text: 'Word cards, multiple choice, matching, sentence building, typing and fill-the-gap.', image: 'assets/projects/sema-kenya/module-2.svg' },
-        { icon: 'headphones', name: 'Recorded Kenyan Audio', text: 'Every word and sentence has a speaker button, with a man and a woman Kenyan voice and a slow mode.', image: 'assets/projects/sema-kenya/module-3.svg' },
-        { icon: 'book', name: 'Stories and Dialogues', text: 'Short Kenyan stories and conversations, played line by line, with questions after.', image: 'assets/projects/sema-kenya/module-4.svg' },
-        { icon: 'repeat', name: 'Practice', text: 'Spaced repetition brings back weak words at the right time.', image: 'assets/projects/sema-kenya/module-5.svg' },
-        { icon: 'star', name: 'Goals, XP and Streaks', text: 'Learners pick goals like travel or street Sheng, and earn XP and daily streaks.', image: 'assets/projects/sema-kenya/module-6.svg' },
-        { icon: 'globe', name: 'English and Somali', text: 'The whole app works in English or Somali, with Kenyan, Sheng and coastal labels on every word.', image: 'assets/projects/sema-kenya/module-7.svg' },
-        { icon: 'wifi', name: 'Works Offline', text: 'Installs on a phone like an app and keeps working without internet.', image: 'assets/projects/sema-kenya/module-8.svg' },
+        { icon: 'map', name: 'Learning Path', text: '32 units in four levels, A1 to B2. Lessons unlock one after another.', image: 'assets/projects/sema-kenya/module-1.webp' },
+        { icon: 'target', name: 'Lessons and Exercises', text: 'Word cards, multiple choice, matching, sentence building, typing and fill-the-gap.', image: 'assets/projects/sema-kenya/module-2.webp' },
+        { icon: 'headphones', name: 'Recorded Kenyan Audio', text: 'Every word and sentence has a speaker button, with a man and a woman Kenyan voice and a slow mode.', image: 'assets/projects/sema-kenya/module-3.webp' },
+        { icon: 'book', name: 'Stories', text: 'Short Kenyan stories, read aloud line by line, with questions after.', image: 'assets/projects/sema-kenya/module-4.webp' },
+        { icon: 'chat', name: 'Conversations', text: 'Real-life Kenyan dialogues with a different voice for each speaker.', image: 'assets/projects/sema-kenya/module-5.webp' },
+        { icon: 'star', name: 'Goals, XP and Streaks', text: 'Learners pick goals like travel or street Sheng, and earn XP and daily streaks.', image: 'assets/projects/sema-kenya/module-6.webp' },
+        { icon: 'globe', name: 'English and Somali', text: 'The whole app works in English or Somali, with Kenyan, Sheng and coastal labels on every word.', image: 'assets/projects/sema-kenya/module-7.webp' },
+        { icon: 'school', name: 'Unit Guides and Offline', text: 'Each unit has a guide with culture and grammar tips, and the app keeps working offline.', image: 'assets/projects/sema-kenya/module-8.webp' },
       ],
     },
   ],
@@ -513,6 +521,10 @@ function startModal() {
 /* ---------- Contact form: opens WhatsApp or email with the message ---------- */
 function startContact() {
   const form = $('#contact-form');
+  // Only show the ways of sending that are filled in at the top of this file
+  form.querySelector('[value="whatsapp"]').hidden = !SITE.contact.whatsapp;
+  form.querySelector('[value="email"]').hidden = !SITE.contact.email;
+  if (!SITE.contact.whatsapp && !SITE.contact.email) form.hidden = true;
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const d = new FormData(form);
